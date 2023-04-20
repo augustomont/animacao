@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução a Animação</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <style>
+        body{
+            background-color: rgb(173, 213, 248);
+            color: aliceblue;
+            text-shadow: 1px 1px 5px black;
+        }
+        canvas{
+           width: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Minha primeira Animação</h1>
+    </header>
+    <canvas id="myCanvas">
+        
+    </canvas>
+</body>
+<script>
+        function setup() {
+          createCanvas(400, 400);
+        }
+
+// position of the car
+var x = 10;
+var y = 20;
+var z = 50;
+
+var draw = function() {
+   
+   background(251, 255, 176);
+noStroke();
+fill(59, 184, 113);
+rect(-1,181,454,299);
+fill(255, 255, 0);
+stroke(245, 177, 5);
+ellipse(10,10,66,66);
+noStroke();
+fill(250, 217, 150);
+ellipse(6,4,33,33);
+
+
+
+//house
+stroke(0, 0, 0);
+fill(212, 212, 212);
+rect(214,165,93,67);
+triangle(214,165,262,129,308,165);
+rect(249,203,21,28);
+rect(277,176,21,17);
+rect(223,176,21,17);
+strokeWeight(2);
+line(262,129,262,90);
+line(241,110,281,110);
+
+   //dog
+fill(153, 144, 144);
+stroke(0, 0, 0);
+//body and legs
+ellipse(x+y+36,z+176,8,22);
+ellipse(x+37,z+176,8,22);
+ellipse(x+45,z+159,38,20);
+ellipse(x+32,z+176,8,28);
+ellipse(x+y+32,z+176,8,28);
+//dog's head
+ellipse(x+68,z+148,21,22);
+ellipse(x+64,z+140,10,16);
+noStroke();
+ellipse(x+68,z+148,21,22);
+stroke(0, 0, 0);
+ellipse(x+78,z+153,10,6);
+noStroke();
+ellipse(x+68,z+148,21,22);
+stroke(0, 0, 0);
+ellipse(x+20,z+154,17,5);
+noStroke();
+ellipse(x+45,z+159,38,20);
+stroke(0, 0, 0);
+
+//dog's eyes
+fill(255, 255, 255);
+ellipse(x+75,z+146,7,5);
+fill(0, 0, 0);
+ellipse(x+76,z+146,2,2);
+
+//cloud
+noStroke();
+fill(255, 255, 255);
+ellipse(x+196,114,56,28);
+ellipse(x+160,117,43,32);
+ellipse(x+162,140,82,43);
+ellipse(x+217,142,60,34);
+//bone
+stroke(0, 0, 0);
+ellipse(x+146,189,10,10);
+ellipse(x+146,196,10,10);
+ellipse(x+y+146,189,10,10);
+ellipse(x+y+146,196,10,10);
+ellipse(x+156,192,23,8);
+noStroke();
+ellipse(x+156,192,27,8);
+ellipse(x+146,189,10,10);
+ellipse(x+146,196,10,10);
+ellipse(x+y+146,189,10,10);
+ellipse(x+y+146,196,10,10);
+
+//string
+stroke(0, 0, 0);
+line(x+157,188,x+178,148);
+
+
+
+// draw the car body
+fill(255, 0, 115);
+rect(x, z+200, 100, 20);
+rect(x + 15,z+ 178, 70, 40);
+
+// draw the wheels
+fill(77, 66, 66);
+ellipse(x + 25, z+221, 24, 24);
+ellipse(x + 75, z+221, 24, 24);
+
+x=x+2;
+if(x>400){
+    return x = -220;
+}
+};
+    </script>
+</html>
